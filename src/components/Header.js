@@ -21,7 +21,7 @@ function Header(props) {
                 <SlBasket onClick={()=>setCartOpen(cartOpen=!cartOpen)} className='shop-cart-button' />           {/* компонент корзинки из библиотеки*/}
                 {cartOpen&&(<div className='shop-cart'>
                     {props.ord.map(or=>( 
-                        <Order item={or} key={or.id}/> 
+                        <Order item={or} key={or.id} onDelete={props.onDelete}/> 
                     ))}
 
                 </div>)}    {/* если cartOpen true тогда*/}

@@ -37,7 +37,7 @@ table{border-collapse:collapse;border-spacing:0} */
   width: 1440px;
   height: 600px;
   margin-top: 30px;
-  margin-left: 150px;
+  margin-left: 200px;
   background-blend-mode: multiply;   /*наложить сверху оттенок*/
   background-color: rgba(234, 240, 238, 0);
   /* position: relative; */
@@ -91,7 +91,7 @@ table{border-collapse:collapse;border-spacing:0} */
 
 .container-img{
   height: 150px;
-  width: 250px;
+  width: 200px;
   margin-bottom: 25px;
   color: azure;
 }
@@ -151,4 +151,11 @@ header div{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.categories{
+
+  color: azure;
+  font-size: 32px;
+  
 }
