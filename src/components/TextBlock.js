@@ -1,5 +1,6 @@
 // import React from 'react'
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+
 
 function TextBlock() {
 
@@ -17,4 +18,4 @@ function TextBlock() {
 }
 
 export default TextBlock
- {/*если smile тогда(&&)  11строка*/}
+ /*если smile тогда(&&)  11строка*/

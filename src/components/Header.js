@@ -14,9 +14,9 @@ function Header(props) {
             <span className='logo'> Суши Мания</span>
             
                 <ul className='nav'>
-                    <li className='nav-item'>Главная </li>   
-                    <li className='nav-item'>О нас</li>  
-                    <li className='nav-item'>Контакты</li>  
+                    <li className='nav-item'>Доставка любой еды </li>   
+                    <li className='nav-item'>Симфероль</li>  
+                    <li className='nav-item'>8 800 800 88 88</li>  
                 </ul>       
                 <SlBasket onClick={()=>setCartOpen(cartOpen=!cartOpen)} className='shop-cart-button' />           {/* компонент корзинки из библиотеки*/}
                 {cartOpen&&(<div className='shop-cart'>

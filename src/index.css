@@ -10,6 +10,8 @@ table{border-collapse:collapse;border-spacing:0} */
 .App{
   background-color: rgba(19, 18, 21, 0.982);
   width: 1520px;
+  height: 1750px;
+ 
 }
 
 .logo{font-weight: 700;
@@ -76,11 +78,18 @@ table{border-collapse:collapse;border-spacing:0} */
   border: 1px solid;
 }
 
-.container-main{
-  display: flex; 
-  justify-content: space-around; 
+.container-main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   height: 410px;
   color: azure;
+  align-content: space-between;
+}
+
+.container-main > div {
+  width: calc(25% - 20px); /* Устанавливаем ширину каждого блока на 1/3 с учетом отступов */
+  margin: 10px; /* Добавляем отступы между блоками */
 }
 
 .container-title{
@@ -113,14 +122,17 @@ table{border-collapse:collapse;border-spacing:0} */
 .add-to-card{
   height: 25px;
   width: 25px;
-  border-radius: 25px;
-  background-color: red;
+  border-radius: 50%; 
+  background-color: rgb(199, 48, 48);
   text-align: center;
   color: aliceblue;
   font-weight: 500;
   display: flex;
+  justify-content: center; 
+  align-items: center; 
   cursor: pointer;
-  transform: 500ms;
+  transition: transform 500ms; /*  transition для анимации */
+  margin-left: 15px;
   
 }
 
@@ -143,9 +155,9 @@ header div{
   position: relative;
 }
 .textBlock{
-  height: 150px;
-  width: 150px;
-  background-color: aqua ;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(14, 56, 56) ;
   position: absolute;
   background-image: url('./img/smile.jpg');
   background-size: contain;

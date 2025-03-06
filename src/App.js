@@ -18,7 +18,7 @@ class App extends React.Component {
         {
           id:1,
           title:'Роллы калифорния',
-          subtitle:'описание товара: ролл калифорния',
+          subtitle:'описание товара: калифорния',
           price: 500,
           categories:'cool',
           img:'californiya.jpg'
@@ -26,7 +26,7 @@ class App extends React.Component {
         {
           id:2,
           title:'Ролл запеченный',
-          subtitle:'описание товара: ролл запеченный',
+          subtitle:'описание товара: запеченный',
           price: 700,
           categories:'hot',
           img:'zapechenie.jpg'
@@ -38,7 +38,32 @@ class App extends React.Component {
           price: 400,
           categories:'cool',
           img:'овощной.jpg'
+        },
+        {
+          id:4,
+          title:'Ролл с авокадо',
+          subtitle:'описание товара: ролл с авокадо',
+          price: 500,
+          categories:'cool',
+          img:'роллы с авокадо.jpeg'
+        },
+        {
+          id:5,
+          title:'Ролл в кляре',
+          subtitle:'описание товара: ролл в кляре',
+          price: 800,
+          categories:'hot',
+          img:'роллы в кляре .jpeg'
+        },
+        {
+          id:6,
+          title:'Ролл овощной',
+          subtitle:'описание товара: ролл овощной',
+          price: 400,
+          categories:'cool',
+          img:'роллы овощные.jpeg'
         }
+
       ], 
       test:[
         {
@@ -60,13 +85,19 @@ class App extends React.Component {
     this.changeCategories =this.changeCategories.bind(this)
   }
 
+  componentDidMount() {
+    // При монтировании компонента по умолчанию показываем все товары
+    this.changeCategories('all');
+  }
+
   render(){
     return (
       <div className="App">
         <TextBlock/>
        <Header ord={this.state.orders} onDelete={this.onDelete}/>
        <Categories changeCategories={this.changeCategories}/>
-       <Items items={this.state.categoriesItem} onAdd={this.addToOrder}/>     <Items items={this.state.items} onAdd={this.addToOrder}/>    ПОДМЕНА items
+       <Items items={this.state.categoriesItem} onAdd={this.addToOrder}/>    
+        {/* <Items items={this.state.items} onAdd={this.addToOrder}/>    ПОДМЕНА items */}
        <Test test={this.state.test}/>
       </div>
     );
